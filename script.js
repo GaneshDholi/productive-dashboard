@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const { lat, lon } = data.coord;
       const locationRes = await fetch(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${apiKey}`
       );
       const locationData = await locationRes.json();
 
