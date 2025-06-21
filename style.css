@@ -1,0 +1,691 @@
+:root {
+  --pri: #493323;
+  --sec: #91684a;
+  --ter1: #91684a;
+  --ter2: #ffdf91;
+}
+
+@font-face {
+  font-family: "light";
+  src: url(./font/AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: "normal";
+  src: url(./font/AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: "bold";
+  src: url(./font/AeonikTRIAL-Bold.otf);
+}
+body {
+  font-family: "light";
+  background-color: var(--pri);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+header {
+  font-family: "bold";
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--sec);
+  padding: 15px;
+  text-align: center;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+main {
+  margin: 10px;
+}
+
+.landingPageHeader {
+  color: var(--ter2);
+}
+
+#changeTheme {
+  border: none;
+  color: var(--pri);
+  background-color: var(--ter2);
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.topsection {
+  padding: 15px;
+  background-image: url("./assets/devon-daniel-JjuvyjRmw0k-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.date-time,
+.weather {
+  position: relative;
+  padding: 20px;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  word-spacing: 5px;
+  font-family: "normal";
+}
+
+#date {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+#daytime {
+  font-size: 55px;
+  margin-top: 20px;
+  font-family: "bold";
+}
+
+#city {
+  margin: 40px 0 40px 5px;
+  font-size: 30px;
+}
+
+#temp {
+  font-size: 55px;
+  font-family: "bold";
+}
+
+#whether {
+  font-size: 30px;
+}
+
+.other-whether {
+  margin-top: 80px;
+  font-size: 18px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 10px;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 280px;
+  height: 500px;
+  margin: 25px;
+  overflow: hidden;
+}
+
+.card:active {
+  scale: 0.85;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "light";
+}
+.card:hover {
+  background-color: #6b5b4b;
+}
+
+.card1 {
+  background-image: url("https://plus.unsplash.com/premium_photo-1710962184909-f9f8dc2c9f5f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+}
+
+.card2 {
+  background-image: url("./assets/planner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card3 {
+  background-image: url("./assets/motivation.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card4 {
+  background-image: url("./assets/pomodoro.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card5 {
+  background-image: url("./assets/goals.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+#allcards {
+  display: none;
+  height: 100%;
+}
+
+footer {
+  background-color: var(--sec);
+  color: var(--ter2);
+  padding: 40px;
+  font-size: larger;
+  font-family: "normal";
+  margin: -10px;
+  width: 96.3%;
+}
+
+/*todo style*/
+.task-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  font-family: "normal";
+  justify-content: center;
+}
+
+.task-input {
+  width: 30%;
+}
+
+.task-list {
+  width: 70%;
+}
+.task-input,
+.task-list {
+  background-color: var(--sec);
+  padding: 20px;
+  border-radius: 10px;
+  height: 530px;
+}
+
+.task-input h3 {
+  margin-top: 0;
+}
+
+.input-field,
+.textarea-field {
+  width: 90%;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+}
+
+.textarea-field {
+  height: 300px;
+  resize: none;
+  margin-top: 10px;
+}
+
+.important-checkbox {
+  margin: 10px;
+}
+
+.add-task-btn {
+  margin-top: 15px;
+  background: var(--ter2);
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.task-item {
+  background-color: var(--pri);
+  color: var(--ter2);
+  padding: 15px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complete-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.dot {
+  color: red;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+#section-header {
+  margin: 20px;
+  font-size: 35px;
+  font-family: "bold";
+  word-spacing: 6px;
+  color: var(--ter2);
+}
+
+.todo-section-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#close,
+#closePlanning,
+#closeMotivation,
+#closeTimer,
+#closeGoals {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #ef4444;
+  border: none;
+  border-radius: 0.75rem;
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#close:hover,
+#close:focus,
+#closePlanning:hover,
+#closePlanning:focus,
+#closeMotivation:hover,
+#closeMotivaiton:focus,
+#closeTimer:focus,
+#closeTimer:hover,
+#closeGoals:hover,
+#closeGoals:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+#close:active,
+#closePlanning,
+#closeMotivation,
+#closeTimer,
+#closeGoals {
+  transform: scale(0.98);
+  color: var(--pri);
+}
+
+/*Planner css*/
+#planner-element {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.planning-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.planning-head {
+  margin: 20px;
+  font-size: 35px;
+  font-family: "bold";
+  word-spacing: 6px;
+  color: var(--ter2);
+
+}
+
+#planner {
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  background-color: var(--ter1);
+  padding: 20px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.block {
+  background-color: var(--pri);
+  color: var(--ter2);
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.editable {
+  margin: 8px 0;
+  padding: 4px;
+  min-height: 20px;
+}
+
+.save-btn,
+.delete-btn {
+  background-color: var(--ter2);
+  color: var(--pri);
+  border: none;
+  margin: 5px 5px 0 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.editable:focus {
+  border: none;
+  outline: none;
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  background-color: var(--sec);
+  color: var(--pri);
+  border-radius: 50%;
+  cursor: help;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.info-icon:hover {
+  background-color: var(--ter2);
+}
+
+/*mothivation css*/
+.quote-widget {
+  background-color: var(--ter2);
+  border-radius: 16px;
+  width: 400px;
+  padding: 24px;
+  position: relative;
+  font-family: "light";
+}
+
+.quote-widget {
+  background-color: var(--ter2);
+  border-radius: 20px;
+  box-shadow: 24px 24px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 200px;
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.quote-widget:hover {
+  transform: translateY(-5px);
+  filter:
+  drop-shadow(0 0 10px var(--pri))
+  drop-shadow(0 0 20px var(--sec))
+  drop-shadow(0 0 30px var(--ter2));
+}
+
+.quote-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ter2);
+  background-color: var(--pri);
+  padding: 4px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.quote-body p {
+  margin: 0;
+}
+
+#quoteText {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--pri);
+  margin-bottom: 12px;
+
+}
+
+#quoteAuthor {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ter2);
+  background-color: var(--pri);
+  padding: 12px 12px;
+  border-radius: 4px;
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: center;
+  margin-left: 50%;
+}
+
+#motivation-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 740px;
+  position: relative;
+}
+
+.centerMotivation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*pomp doro*/
+#pomodoro {
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--ter1);
+}
+
+.pomo-header {
+  background-color: #4caf50;
+  color: var(--pri);
+  font-weight: 700;
+  padding: 12px;
+  font-size: 20px;
+  border-radius: 10px 10px;
+}
+
+.pomo-timer {
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: var(--pri);
+}
+
+.pomo-controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--pri);
+  color: var(--ter2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pomo-header.break {
+  background-color: #2196f3;
+  color: white;
+  padding: 12px;
+  font-size: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Goals css */
+#goalsSection {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--ter2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+#goalsSection h2 {
+  text-align: center;
+  color: var(--pri);
+  padding: 10px;
+  font-family: "bold";
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.goal-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 50px;
+}
+
+.goal-input input {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.goal-input button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.goal-input button:hover {
+  background-color: #45a049;
+}
+
+#goalList {
+  list-style: none;
+  padding: 0;
+}
+
+#goalList li {
+  padding: 10px 12px;
+  margin: 8px 0;
+  background-color: var(--pri);
+  color: var(--ter2);
+  font-family: "bold";
+  font-weight: 700;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+#goalList li span {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.goal-remove {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 530px) {
+  .topsection {
+    display: block;
+  }
+  .block {
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .task-container {
+    display: block;
+  }
+  .task-list {
+    margin-top: 50px;
+  }
+
+  .task-input {
+    width: fit-content;
+  }
+
+  #section-header {
+    font-size: 20px;
+  }
+
+  .planning-head {
+    font-size: 20px;
+  }
+
+  .goal-input {
+    width: auto;
+  }
+
+  #goalsSection {
+    max-width: 250px;
+  }
+}

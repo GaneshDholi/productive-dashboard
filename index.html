@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+
+        <main>
+            <header>
+                <h1 class="landingPageHeader">Productivity Dashboard</h1>
+                <button id="changeTheme">Change Theme</button>
+            </header>
+            <section class="topsection">
+                <div class="date-time">
+                    <h2 id="date"></h2>
+                    <h3 id="daytime"></h3>
+                    <h4 id="city"></h4>
+                </div>
+                <div class="weather">
+                    <h2 id="temp"></h2>
+                    <p id="whether"></p>
+                    <div class="other-whether">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cardSection">
+                <div class="cards">
+                    <div id="1" class="card card1" data-target="todo">
+                        <span class="card-text">To Do List</span>
+                    </div>
+                    <div id="2" class="card card2" data-target="planner">
+                        <span class="card-text">Daily Planner</span>
+                    </div>
+                    <div id="3" class="card card3" data-target="motivation">
+                        <span class="card-text">Motivational Quote</span>
+                    </div>
+                    <div id="4" class="card card4" data-target="timer">
+                        <span class="card-text">Pomodoro Timer</span>
+                    </div>
+                    <div id="5" class="card card5" data-target="Goals">
+                        <span class="card-text">Life Goals</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="allcards">
+            <section id="todo element"> 
+                <div class="todo-section-navbar">
+                    <h1 id="section-header">Your Personalised Task List</h1>
+                    <button id="close">Close</button>
+                </div>
+
+                <div class="task-container">
+                    <div class="task-input">
+                        <input id="title" type="text" placeholder="Project Title"
+                            class="input-field" />
+                        <textarea id="details" placeholder="Enter Details" class="textarea-field"></textarea>
+                        <div class="important-checkbox">
+                            <input type="checkbox" id="important" />
+                            <label for="important">Mark as Important!</label>
+                        </div>
+                        <button class="add-task-btn">Add Task</button>
+                    </div>
+
+                    <div class="task-list">
+                        <div class="task-item">
+                            <span>Frontend project for Cohort 
+                                <span class="dot"><img src="./assets/red-sticker.png" alt="newone" style="height: 20px; width: 20px; background-size: cover; background-position: center;"></span></span>
+                            <button class="complete-btn">Mark as
+                                Completed</button>
+                        </div>
+                        <div class="task-item">
+                            <span>Animation Masterclass 
+                                <span class="dot"><img src="./assets/red-sticker.png" alt="newone" style="height: 20px; width: 20px; background-size: cover; background-position: center;"></span></span>
+                            <button class="complete-btn">Mark as
+                                Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="planner element">
+                <div class="planning-nav">
+                    <h1 class="planning-head">Plan your Day to be more Productive  <span class="info-icon" title="Press Enter to add a new task"><i class="fas fa-info"></i></span> </h1>
+                    <button id="closePlanning">Close</button>
+                </div>
+                <div class="grid" id="plannerGrid">
+                    
+                </div>
+            </section>
+            <section id="motivation element" style="height: 740px;">
+                <div class="planning-nav">
+                    <h1 class="planning-head">Motivation Quote of the Day  <span class="info-icon" title="Press M to see new Quote"><i class="fas fa-info"></i></span> </h1>
+                    <button id="closeMotivation">Close</button>
+                </div>
+                <div class="centerMotivation">
+                    <div class="quote-widget">
+                        <div class="quote-header">Quote of the Day</div>
+                        <div class="quote-body">
+                            <p id="quoteText">...</p>
+                            <p id="quoteAuthor">— Author</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="timer element" style="height: 740px;">
+                <div class="planning-nav">
+                    <h1 class="planning-head">PomoDoro Timer which help you to working <span class="info-icon" title="pomo doro"><i class="fas fa-info"></i></span> </h1>
+                    <button id="closeTimer">Close</button>
+                </div>
+                <div class="centerMotivation">
+                    <section id="pomodoro">
+                        <div class="pomo-header" id="sessionLabel">Work Session</div>
+                        <div class="pomo-timer" id="timer">25:00</div>
+                        <div class="pomo-controls">
+                            <button id="startBtn">Start</button>
+                            <button id="pauseBtn">Pause</button>
+                            <button id="resetBtn">Reset</button>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <section id="Goals element" style="height: 740px;">
+                <div class="planning-nav">
+                    <h1 class="planning-head">Create goals for your Future <span class="info-icon" title="success is the progressive realization of a worthy goal or ideal"><i class="fas fa-info"></i></span> </h1>
+                    <button id="closeGoals">Close</button>
+                </div>
+                <div class="centerMotivation">
+                    <section id="goalsSection">
+                        <h2>🎯 Life Goals</h2>
+                        <div class="goal-input">
+                            <input type="text" id="goalInput" placeholder="Enter your life goal...">
+                            <button id="addGoalBtn">Add Goal</button>
+                        </div>
+                        <ul id="goalList"></ul>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer>
+            Project build a complete web app useing html, css and js
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
